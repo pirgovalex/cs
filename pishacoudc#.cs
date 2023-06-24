@@ -1,20 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace csharp
 {
     public class pishacoudc
     {
-        static void Calc(int x,int y,out int s,out int pr)
-        {
-         s=x+y;pr=x*y;   
-
-        }
        static void Main(string[] args)
         {
-         int a=3,b=8,c=0,d=0;
-         Calc(a,b,out c,out d);
-         Console.Write(c+"\n"+d);
+            int[,] pache={{1,2,3}
+                         ,{4,5,6}
+                         ,{7,8,9}};
+          int diagonalSum = Enumerable.Range(0, pache.GetLength(0))
+            .Sum(i => pache[i, i]);
+            Console.WriteLine(diagonalSum);
          }
         } 
     }
